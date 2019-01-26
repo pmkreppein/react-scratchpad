@@ -14,6 +14,16 @@ const mappedOrderedList = React.createElement('ol', null,
   tasks.map((task, index) => React.createElement('li', {key: index}, task))
 );
 
+const jsxElement =
+<div>
+  <h1>Task List: </h1>
+  <ol>
+    {tasks.map((task, index) => <li key = {index}> {task} </li>)}
+  </ol>
+</div>
+
+
 ReactDOM.render(element, document.getElementById('root'));
 ReactDOM.render(orderedList, document.getElementById('ordered-list'));
 ReactDOM.render(mappedOrderedList, document.getElementById('mapped-ordered-list'));
+ReactDOM.render(jsxElement, document.getElementById('jsx-element'));
