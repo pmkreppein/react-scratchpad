@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Main from './Components/Main';
 const tasksArray = ['Vue', 'Phoenix/Elixir','Unity', 'AR Kit']
 const element = React.createElement('h1', null, "Hello World!");
 
@@ -23,35 +24,11 @@ const jsxElement =
 </div>
 
 
-class List extends Component {
-  render(){
-    return(<div>
 
-      <ol>
-        {this.props.tasks.map((task, index) => <li key = {index}> {task} </li>)}
-      </ol>
-    </div>)
-  }
-}
 
-class  Title extends Component {
-    render() {
-      return <h2> {this.props.title} </h2>
-    }
-}
 
-class Main extends Component {
-  render(){
-    return (
-      <div>
-        <Title title={"Rendered from array in JS File:"}/>
-        <List tasks={tasksArray}/>
-        <Title title={"Showing component using on the fly array for props:"}/>
-        <List tasks={["Random","Array","For","Task","List"]}/>
-      </div>
-    )
-  }
-}
+
+
 
 ReactDOM.render(element, document.getElementById('root'));
 ReactDOM.render(orderedList, document.getElementById('ordered-list'));
